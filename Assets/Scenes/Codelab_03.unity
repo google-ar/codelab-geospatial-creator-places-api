@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028353, g: 0.22571383, b: 0.30692253, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1262,7 +1262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75a1114bd37d249b08c83cfbaf234679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Origin: {fileID: 596133977}
+  SessionOrigin: {fileID: 0}
   Session: {fileID: 193207847}
   AnchorManager: {fileID: 596133976}
   RaycastManager: {fileID: 596133975}
@@ -5500,7 +5500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Session: {fileID: 193207847}
-  Origin: {fileID: 0}
+  SessionOrigin: {fileID: 0}
   CameraManager: {fileID: 791148985}
   ARCoreExtensionsConfig: {fileID: 11400000, guid: c109cc0d42e3648dca906c2cccaaa763, type: 2}
   CameraConfigFilter: {fileID: 0}
@@ -6660,7 +6660,6 @@ GameObject:
   - component: {fileID: 1740071032}
   - component: {fileID: 1740071030}
   - component: {fileID: 1740071031}
-  - component: {fileID: 1740071033}
   m_Layer: 0
   m_Name: AR Geospatial Creator Origin
   m_TagString: EditorOnly
@@ -6696,8 +6695,8 @@ MonoBehaviour:
   _latitude: 37.7790819
   _longitude: -122.4157961
   _height: 11.5
-  _ecefX: -2705759.27089486
-  _ecefY: -4260997.338984076
+  _ecefX: -2705759.2708948604
+  _ecefY: -4260997.338984075
   _ecefZ: 3886099.4065455436
   _scale: 1
 --- !u!4 &1740071032
@@ -6716,18 +6715,6 @@ Transform:
   - {fileID: 418067767}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1740071033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1740071029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2daf6c1ffa67c40e1823f4e2986e22f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1769789001
 GameObject:
   m_ObjectHideFlags: 0
