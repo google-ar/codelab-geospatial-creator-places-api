@@ -2,6 +2,7 @@
   "dependencies": {
     "com.cesium.unity": "1.8.0",
     "com.google.ar.core.arfoundation.extensions": "https://github.com/google-ar/arcore-unity-extensions.git",
+    "com.unity.cloud.gltfast": "6.2.0",
     "com.unity.collab-proxy": "2.3.1",
     "com.unity.feature.development": "1.0.1",
     "com.unity.textmeshpro": "3.0.6",
