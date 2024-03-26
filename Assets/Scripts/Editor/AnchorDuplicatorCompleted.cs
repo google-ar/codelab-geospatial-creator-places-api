@@ -1,4 +1,4 @@
-// <copyright file="AnchorDuplicatorComplete.cs" company="Google LLC">
+// <copyright file="AnchorDuplicator.cs" company="Google LLC">
 //
 // Copyright 2024 Google LLC
 //
@@ -27,14 +27,14 @@ namespace Google.XR.ARCoreExtensions.Codelabs.GeospatialCreatorApi
     using UnityEngine;
     using UnityEngine.Networking;
 
-    public class AnchorDuplicatorComplete
+    public class AnchorDuplicatorCompleted
     {
         private const string API_KEY = "<YOUR_API_KEY_HERE>";
 
         private static UnityWebRequest _placesApiRequest = null;
         private static PlacesApiResponse.Place[] _places = null;
 
-        [MenuItem("Google AR Codelab/Run Places Request (Complete)", false, 10)]
+        [MenuItem("Google AR Codelab/(Completed) Run Places Request", false, 50)]
         public static void SearchForPlaces()
         {
             ARGeospatialCreatorOrigin origin =
@@ -63,10 +63,30 @@ namespace Google.XR.ARCoreExtensions.Codelabs.GeospatialCreatorApi
             origin.StartCoroutine(SendPlacesRequest());
         }
 
-        [MenuItem("Google AR Codelab/Create New Anchors from Places Response (Complete)", false, 20)]
+        [MenuItem("Google AR Codelab/(Completed) Create New Anchors from Places Response", false, 51)]
         public static void CreateNewAnchorsFromPlaces()
         {
-            // TODO: Duplicate the prototype ARGeospatialCreatorAnchor and change its position
+            if (_places == null)
+            {
+                Debug.LogError("Cannot create anchors: Places has not been initialized.");
+                return;
+            }
+
+            // We start with only one anchor in the scene, which we want to copy:
+            GameObject prototypeAnchorObject = GameObject
+                .FindObjectOfType<ARGeospatialCreatorAnchor>()
+                .gameObject;
+
+            foreach (PlacesApiResponse.Place place in _places)
+            {
+                GameObject newAnchorObject = GameObject.Instantiate(prototypeAnchorObject);
+                ARGeospatialCreatorAnchor anchor =
+                    newAnchorObject.GetComponent<ARGeospatialCreatorAnchor>();
+                anchor.Latitude = place.location.latitude;
+                anchor.Longitude = place.location.longitude;
+
+                newAnchorObject.name = place.displayName.text;
+            }
         }
 
         private static UnityWebRequest CreatePlacesRequest(
@@ -76,8 +96,21 @@ namespace Google.XR.ARCoreExtensions.Codelabs.GeospatialCreatorApi
             double lon
         )
         {
-            // TODO: Add code that creates a web request for the Google Places API
-            return null;
+            string postBody =
+                $@"
+            {{""textQuery"":""{searchTerm}"",
+                ""locationBias"":{{
+                    ""circle"":{{
+                        ""center"":{{""latitude"":{lat},""longitude"":{lon}}},
+                        ""radius"":10000}} }} }}";
+
+            string url = "https://places.googleapis.com/v1/places:searchText";
+
+            UnityWebRequest request = UnityWebRequest.Post(url, postBody, "application/json");
+            request.SetRequestHeader("X-Goog-Api-Key", apiKey);
+            request.SetRequestHeader("X-Goog-FieldMask", "places.displayName,places.location");
+
+            return request;
         }
 
         private static IEnumerator SendPlacesRequest()
