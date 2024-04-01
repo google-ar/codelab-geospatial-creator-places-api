@@ -5,13 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Codelab_01.unity
     guid: 14e2bca85dbc44955989f6d4555c40c2
   - enabled: 0
     path: Assets/Scenes/Codelab_02.unity
     guid: eddc7ca3baaa94144a25abc36cfbda9e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Codelab_03.unity
     guid: da9666fae3c83418788f007bc043edd5
   m_configObjects:
