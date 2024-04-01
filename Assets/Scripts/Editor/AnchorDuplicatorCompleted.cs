@@ -72,16 +72,15 @@ namespace Google.XR.ARCoreExtensions.Codelabs.GeospatialCreatorApi
                 return;
             }
 
-            // We start with only one anchor in the scene, which we want to copy:
-            GameObject prototypeAnchorObject = GameObject
+            // You start with only one anchor in the scene, which you want to copy:
+            var prototypeAnchorObject = GameObject
                 .FindObjectOfType<ARGeospatialCreatorAnchor>()
                 .gameObject;
 
-            foreach (PlacesApiResponse.Place place in _places)
+            foreach (var place in _places)
             {
-                GameObject newAnchorObject = GameObject.Instantiate(prototypeAnchorObject);
-                ARGeospatialCreatorAnchor anchor =
-                    newAnchorObject.GetComponent<ARGeospatialCreatorAnchor>();
+                var newAnchorObject = GameObject.Instantiate(prototypeAnchorObject);
+                var anchor = newAnchorObject.GetComponent<ARGeospatialCreatorAnchor>();
                 anchor.Latitude = place.location.latitude;
                 anchor.Longitude = place.location.longitude;
 
@@ -103,6 +102,7 @@ namespace Google.XR.ARCoreExtensions.Codelabs.GeospatialCreatorApi
                     ""circle"":{{
                         ""center"":{{""latitude"":{lat},""longitude"":{lon}}},
                         ""radius"":10000}} }} }}";
+						
 
             string url = "https://places.googleapis.com/v1/places:searchText";
 
