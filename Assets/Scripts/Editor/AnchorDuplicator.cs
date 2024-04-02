@@ -63,12 +63,6 @@ namespace Google.XR.ARCoreExtensions.Codelabs.GeospatialCreatorApi
             origin.StartCoroutine(SendPlacesRequest());
         }
 
-        [MenuItem("Google AR Codelab/Create New Anchors from Places Response", false, 31)]
-        public static void CreateNewAnchorsFromPlaces()
-        {
-            // TODO: Duplicate the prototype ARGeospatialCreatorAnchor and change its position
-        }
-
         private static UnityWebRequest CreatePlacesRequest(
             string apiKey,
             string searchTerm,
@@ -78,6 +72,12 @@ namespace Google.XR.ARCoreExtensions.Codelabs.GeospatialCreatorApi
         {
             // TODO: Add code that creates a web request for the Google Places API
             return null;
+        }
+
+        [MenuItem("Google AR Codelab/Create New Anchors from Places Response", false, 31)]
+        public static void CreateNewAnchorsFromPlaces()
+        {
+            // TODO: Duplicate the prototype ARGeospatialCreatorAnchor and change its position
         }
 
         private static IEnumerator SendPlacesRequest()
