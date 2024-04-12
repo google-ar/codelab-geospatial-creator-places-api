@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Codelab_03.unity
     guid: da9666fae3c83418788f007bc043edd5
   m_configObjects:
-    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 4e73ced3a8b86437e839137a92f68512, type: 2}
-    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: c1d8d364499b84b29b1914226c45a34a, type: 2}
-    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 8f532f58bbc45420f81f642b64e6db77, type: 2}
-    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: f2cac830cfcbf400cbb402b8aaab83d1, type: 2}
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: b9bba9b7b4d2d4581add777c5203eef3, type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: d098e4df743fe4f7a85045e0ea825f92, type: 2}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 491dceffc0f064e2c86c0d1f2df3c469, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: ee22c6a8742d1474b86da77f2a17a60b, type: 2}
