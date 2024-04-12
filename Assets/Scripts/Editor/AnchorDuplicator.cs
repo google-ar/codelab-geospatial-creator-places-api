@@ -1,4 +1,4 @@
-// <copyright file="AnchorDuplicatorComplete.cs" company="Google LLC">
+// <copyright file="AnchorDuplicator.cs" company="Google LLC">
 //
 // Copyright 2024 Google LLC
 //

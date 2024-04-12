@@ -1,4 +1,4 @@
-// <copyright file="AnchorDuplicator.cs" company="Google LLC">
+// <copyright file="AnchorDuplicatorCompleted.cs" company="Google LLC">
 //
 // Copyright 2024 Google LLC
 //
@@ -63,31 +63,6 @@ namespace Google.XR.ARCoreExtensions.Codelabs.GeospatialCreatorApi
             origin.StartCoroutine(SendPlacesRequest());
         }
 
-        [MenuItem("Google AR Codelab/(Completed) Create New Anchors from Places Response", false, 51)]
-        public static void CreateNewAnchorsFromPlaces()
-        {
-            if (_places == null)
-            {
-                Debug.LogError("Cannot create anchors: Places has not been initialized.");
-                return;
-            }
-
-            // You start with only one anchor in the scene, which you want to copy:
-            var prototypeAnchorObject = GameObject
-                .FindObjectOfType<ARGeospatialCreatorAnchor>()
-                .gameObject;
-
-            foreach (var place in _places)
-            {
-                var newAnchorObject = GameObject.Instantiate(prototypeAnchorObject);
-                var anchor = newAnchorObject.GetComponent<ARGeospatialCreatorAnchor>();
-                anchor.Latitude = place.location.latitude;
-                anchor.Longitude = place.location.longitude;
-
-                newAnchorObject.name = place.displayName.text;
-            }
-        }
-
         private static UnityWebRequest CreatePlacesRequest(
             string apiKey,
             string searchTerm,
@@ -95,22 +70,45 @@ namespace Google.XR.ARCoreExtensions.Codelabs.GeospatialCreatorApi
             double lon
         )
         {
-            string postBody =
-                $@"
-            {{""textQuery"":""{searchTerm}"",
-                ""locationBias"":{{
-                    ""circle"":{{
-                        ""center"":{{""latitude"":{lat},""longitude"":{lon}}},
-                        ""radius"":10000}} }} }}";
-						
+			string postBody = "{ \"textQuery\": \"" + searchTerm + "\", " + 
+			                    "   \"locationBias\": { \"circle\": { " +
+			                    "      \"center\": { \"latitude\": " + lat + ", \"longitude\": " + lon + " }, " +
+			                    "      \"radius\": 10000 }" +
+			                    "   }" +
+			                    "}";
 
-            string url = "https://places.googleapis.com/v1/places:searchText";
+			string url = "https://places.googleapis.com/v1/places:searchText";
 
-            UnityWebRequest request = UnityWebRequest.Post(url, postBody, "application/json");
-            request.SetRequestHeader("X-Goog-Api-Key", apiKey);
-            request.SetRequestHeader("X-Goog-FieldMask", "places.displayName,places.location");
+			UnityWebRequest request = UnityWebRequest.Post(url, postBody, "application/json");
+			request.SetRequestHeader("X-Goog-Api-Key", apiKey);
+			request.SetRequestHeader("X-Goog-FieldMask", "places.displayName,places.location");
 
-            return request;
+			return request;
+        }
+
+        [MenuItem("Google AR Codelab/(Completed) Create New Anchors from Places Response", false, 51)]
+        public static void CreateNewAnchorsFromPlaces()
+        {
+			if (_places == null)
+			{
+			    Debug.LogError("Cannot create anchors: Places has not been initialized.");
+			    return;
+			}
+
+			// You start with only one anchor in the scene, which you want to copy:
+			var prototypeAnchorObject = GameObject
+			    .FindObjectOfType<ARGeospatialCreatorAnchor>()
+			    .gameObject;
+
+			foreach (var place in _places)
+			{
+			    var newAnchorObject = GameObject.Instantiate(prototypeAnchorObject);
+			    var anchor = newAnchorObject.GetComponent<ARGeospatialCreatorAnchor>();
+			    anchor.Latitude = place.location.latitude;
+			    anchor.Longitude = place.location.longitude;
+
+			    newAnchorObject.name = place.displayName.text;
+			}
         }
 
         private static IEnumerator SendPlacesRequest()
