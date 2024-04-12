@@ -3589,7 +3589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Session: {fileID: 193207847}
-  Origin: {fileID: 0}
+  Origin: {fileID: 596133977}
   CameraManager: {fileID: 791148985}
   ARCoreExtensionsConfig: {fileID: 11400000, guid: c109cc0d42e3648dca906c2cccaaa763, type: 2}
   CameraConfigFilter: {fileID: 0}

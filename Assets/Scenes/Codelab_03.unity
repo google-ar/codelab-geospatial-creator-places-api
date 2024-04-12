@@ -1262,7 +1262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75a1114bd37d249b08c83cfbaf234679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Origin: {fileID: 0}
+  Origin: {fileID: 596133977}
   Session: {fileID: 193207847}
   AnchorManager: {fileID: 596133976}
   RaycastManager: {fileID: 596133975}
@@ -5500,7 +5500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Session: {fileID: 193207847}
-  Origin: {fileID: 0}
+  Origin: {fileID: 596133977}
   CameraManager: {fileID: 791148985}
   ARCoreExtensionsConfig: {fileID: 11400000, guid: c109cc0d42e3648dca906c2cccaaa763, type: 2}
   CameraConfigFilter: {fileID: 0}
