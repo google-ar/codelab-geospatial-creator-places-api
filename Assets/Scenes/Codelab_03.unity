@@ -854,7 +854,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _altitudeOffset: NaN
-  _latitude: 37.71245499998694
+  _latitude: 37.712454999986946
   _longitude: -122.40788599996009
   _altitude: 30
   _altitudeType: 2
@@ -1013,12 +1013,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _altitudeOffset: NaN
-  _latitude: 37.78186319996952
+  _latitude: 37.78186319996953
   _longitude: -122.46816019790319
   _altitude: 30
   _altitudeType: 2
   _useEditorAltitudeOverride: 1
-  _editorAltitudeOverride: 34.99999922607094
+  _editorAltitudeOverride: 34.99999922513962
   _anchorManager: {fileID: 596133976}
   Origin: {fileID: 1740071030}
 --- !u!4 &261320186
@@ -1067,12 +1067,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _altitudeOffset: NaN
-  _latitude: 37.784170899820694
-  _longitude: -122.4376376005341
+  _latitude: 37.7841708998207
+  _longitude: -122.43763760053413
   _altitude: 30
   _altitudeType: 2
   _useEditorAltitudeOverride: 1
-  _editorAltitudeOverride: 35.000000558793545
+  _editorAltitudeOverride: 35.00000055786222
   _anchorManager: {fileID: 596133976}
   Origin: {fileID: 1740071030}
 --- !u!4 &333115574
@@ -1262,7 +1262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75a1114bd37d249b08c83cfbaf234679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SessionOrigin: {fileID: 0}
+  Origin: {fileID: 0}
   Session: {fileID: 193207847}
   AnchorManager: {fileID: 596133976}
   RaycastManager: {fileID: 596133975}
@@ -1830,11 +1830,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _altitudeOffset: NaN
   _latitude: 37.76337029955756
-  _longitude: -122.47627309841974
+  _longitude: -122.47627309841975
   _altitude: 30
   _altitudeType: 2
   _useEditorAltitudeOverride: 1
-  _editorAltitudeOverride: 35.00000064820051
+  _editorAltitudeOverride: 35.00000064726919
   _anchorManager: {fileID: 596133976}
   Origin: {fileID: 1740071030}
 --- !u!4 &591409582
@@ -2203,7 +2203,7 @@ MonoBehaviour:
   _altitude: 30
   _altitudeType: 2
   _useEditorAltitudeOverride: 1
-  _editorAltitudeOverride: 34.999999969266355
+  _editorAltitudeOverride: 34.99999996833503
   _anchorManager: {fileID: 596133976}
   Origin: {fileID: 1740071030}
 --- !u!4 &659965073
@@ -2252,7 +2252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _altitudeOffset: NaN
-  _latitude: 37.7790819
+  _latitude: 37.77908190000001
   _longitude: -122.41579609999998
   _altitude: 30
   _altitudeType: 2
@@ -2706,12 +2706,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _altitudeOffset: NaN
-  _latitude: 37.80262429987311
+  _latitude: 37.802624299873116
   _longitude: -122.41319209997381
   _altitude: 30
   _altitudeType: 2
   _useEditorAltitudeOverride: 1
-  _editorAltitudeOverride: 34.999999046325684
+  _editorAltitudeOverride: 34.99999904539436
   _anchorManager: {fileID: 596133976}
   Origin: {fileID: 1740071030}
 --- !u!4 &754688146
@@ -2835,12 +2835,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _altitudeOffset: NaN
-  _latitude: 37.76013330103366
-  _longitude: -122.3976555995063
+  _latitude: 37.76013330103367
+  _longitude: -122.39765559950634
   _altitude: 30
   _altitudeType: 2
   _useEditorAltitudeOverride: 1
-  _editorAltitudeOverride: 34.99999988079071
+  _editorAltitudeOverride: 34.99999987985939
   _anchorManager: {fileID: 596133976}
   Origin: {fileID: 1740071030}
 --- !u!4 &762446576
@@ -3194,7 +3194,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.1
-  far clip plane: 20
+  far clip plane: 1000
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -3608,7 +3608,7 @@ MonoBehaviour:
   _altitude: 30
   _altitudeType: 2
   _useEditorAltitudeOverride: 1
-  _editorAltitudeOverride: 35.000000309199095
+  _editorAltitudeOverride: 35.00000030826777
   _anchorManager: {fileID: 596133976}
   Origin: {fileID: 1740071030}
 --- !u!4 &927130917
@@ -4339,12 +4339,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _altitudeOffset: NaN
-  _latitude: 37.778897599996455
-  _longitude: -122.4156692000033
+  _latitude: 37.77889759999646
+  _longitude: -122.41566920000331
   _altitude: 30
   _altitudeType: 2
   _useEditorAltitudeOverride: 1
-  _editorAltitudeOverride: 35.00000072363764
+  _editorAltitudeOverride: 35.000000721774995
   _anchorManager: {fileID: 596133976}
   Origin: {fileID: 1740071030}
 --- !u!4 &1185098131
@@ -5108,12 +5108,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _altitudeOffset: NaN
-  _latitude: 37.779081899999994
-  _longitude: -122.41579609999997
+  _latitude: 37.7790819
+  _longitude: -122.41579609999998
   _altitude: 30
   _altitudeType: 2
   _useEditorAltitudeOverride: 1
-  _editorAltitudeOverride: 35.00000000093132
+  _editorAltitudeOverride: 35
   _anchorManager: {fileID: 596133976}
   Origin: {fileID: 1740071030}
 --- !u!4 &1359563283
@@ -5162,7 +5162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _altitudeOffset: NaN
-  _latitude: 37.79680979946467
+  _latitude: 37.796809799464675
   _longitude: -122.4290511994873
   _altitude: 30
   _altitudeType: 2
@@ -5446,12 +5446,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _altitudeOffset: NaN
-  _latitude: 37.7431595003932
+  _latitude: 37.743159500393205
   _longitude: -122.47937020275027
   _altitude: 30
   _altitudeType: 2
   _useEditorAltitudeOverride: 1
-  _editorAltitudeOverride: 35.000000804662704
+  _editorAltitudeOverride: 35.00000080280006
   _anchorManager: {fileID: 596133976}
   Origin: {fileID: 1740071030}
 --- !u!4 &1472892547
@@ -5500,7 +5500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Session: {fileID: 193207847}
-  SessionOrigin: {fileID: 0}
+  Origin: {fileID: 0}
   CameraManager: {fileID: 791148985}
   ARCoreExtensionsConfig: {fileID: 11400000, guid: c109cc0d42e3648dca906c2cccaaa763, type: 2}
   CameraConfigFilter: {fileID: 0}
@@ -5824,7 +5824,7 @@ MonoBehaviour:
   _altitude: 30
   _altitudeType: 2
   _useEditorAltitudeOverride: 1
-  _editorAltitudeOverride: 35.321580776013434
+  _editorAltitudeOverride: 35.32158077508211
   _anchorManager: {fileID: 596133976}
   Origin: {fileID: 1740071030}
 --- !u!4 &1563606720
@@ -6260,7 +6260,7 @@ MonoBehaviour:
   _altitude: 30
   _altitudeType: 2
   _useEditorAltitudeOverride: 1
-  _editorAltitudeOverride: 35.00000105518848
+  _editorAltitudeOverride: 35.000001054257154
   _anchorManager: {fileID: 596133976}
   Origin: {fileID: 1740071030}
 --- !u!4 &1684340673
@@ -7312,12 +7312,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _altitudeOffset: NaN
-  _latitude: 37.78885189997967
+  _latitude: 37.788851899979676
   _longitude: -122.44489200066026
   _altitude: 30
   _altitudeType: 2
   _useEditorAltitudeOverride: 1
-  _editorAltitudeOverride: 34.9999994430691
+  _editorAltitudeOverride: 34.99999944213778
   _anchorManager: {fileID: 596133976}
   Origin: {fileID: 1740071030}
 --- !u!4 &1868327389
@@ -7536,12 +7536,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _altitudeOffset: NaN
-  _latitude: 37.770154800131934
+  _latitude: 37.77015480013194
   _longitude: -122.45102890016362
   _altitude: 30
   _altitudeType: 2
   _useEditorAltitudeOverride: 1
-  _editorAltitudeOverride: 34.99999988544732
+  _editorAltitudeOverride: 34.999999884516
   _anchorManager: {fileID: 596133976}
   Origin: {fileID: 1740071030}
 --- !u!4 &1883143836
@@ -8329,7 +8329,7 @@ MonoBehaviour:
   _altitude: 30
   _altitudeType: 2
   _useEditorAltitudeOverride: 1
-  _editorAltitudeOverride: 34.99999924004078
+  _editorAltitudeOverride: 34.99999923910946
   _anchorManager: {fileID: 596133976}
   Origin: {fileID: 1740071030}
 --- !u!4 &2126171769
